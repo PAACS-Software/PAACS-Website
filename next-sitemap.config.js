@@ -6,55 +6,15 @@ module.exports = {
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: [
-    "/profile",
-    "/signin",
-    "/signup",
-    "/reset-password",
-    "/forgot-password",
-    "/auth/callback",
-    "/blog-sidebar",
-    "/blog/test-blog",
-    "/404",
-    "/500",
-    "/error",
-    "/contact-success",
-  ],
   robotsTxtOptions: {
     policies: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: [
-          // Authentication pages
-          "/profile",
-          "/signin",
-          "/signup",
-          "/reset-password",
-          "/forgot-password",
-          "/auth/callback",
-          "/login",
-
-          // Test/dev pages
-          "/blog-sidebar",
-          "/blog/test-blog",
-          "/blog-details",
-
-          // Error pages
-          "/404",
-          "/500",
-          "/error",
-          "/contact-success",
-
-          // Block parameters and files
-          "/api/*",
-
-          // Old Jekyll paths
-          "/category/*",
-          "/simulations/*",
-          "/feed.xml",
-          "/*.html$",
-        ],
+      },
+      {
+        userAgent: "*",
+        disallow: ["/api/", "/_next/", "/static/"],
       },
     ],
     additionalSitemaps: [],

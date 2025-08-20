@@ -1,7 +1,7 @@
 // src/app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import posts from "@/app/blog/data/posts";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
@@ -14,50 +14,40 @@ import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import QuoteBox from "@/components/Blog/QuoteBox";
 
-// This is crucial for static generation
 export const dynamicParams = false;
 
-// Plugin to handle :::quote syntax
-const quotePlugin = () => {
-  return (tree: any) => {
-    visit(tree, (node) => {
-      if (node.type === "containerDirective" && node.name === "quote") {
-        const data = node.data || (node.data = {});
-        data.hName = "QuoteBox";
-        data.hProperties = {};
-      }
-    });
-  };
+// :::quote directive
+const quotePlugin = () => (tree: any) => {
+  visit(tree, (node) => {
+    if (node.type === "containerDirective" && node.name === "quote") {
+      const data = (node.data ||= {});
+      data.hName = "QuoteBox";
+      data.hProperties = {};
+    }
+  });
 };
 
 export async function generateStaticParams() {
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = posts.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
-    return {
-      title: "Not Found",
-      description: "Blog post not found",
-    };
+    return { title: "Not Found", description: "Blog post not found" };
   }
 
-  const canonicalUrl = `https://paacs.pro/blog/${params.slug}`;
-
+  const canonicalUrl = `https://paacs.pro/blog/${slug}`;
   return {
     title: post.title,
     description: post.description ?? "",
-    alternates: {
-      canonical: canonicalUrl,
-    },
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: post.title,
       description: post.description ?? "",
@@ -92,7 +82,6 @@ export default async function BlogPost({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
   const post = posts.find((p) => p.slug === slug);
   if (!post) notFound();
 
@@ -133,6 +122,7 @@ export default async function BlogPost({
                   <div className="mb-5 flex items-center">
                     <p className="text-body-color mr-5 flex items-center text-base font-medium">
                       <span className="mr-3">
+                        {/* calendar icon */}
                         <svg
                           width="15"
                           height="15"
