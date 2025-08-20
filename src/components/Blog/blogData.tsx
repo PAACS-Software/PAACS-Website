@@ -3,45 +3,33 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    slug: "paacs-mission",
+    title: "Our Mission - Simulate Anything, Understand Everything",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-01.jpg",
+      "PAACS exists to break boundaries in simulation. Our mission: simulate anything, empower everyone.",
+    image: "/images/blog/Logo_page-0002.jpg",
     author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "Paul Dewhurst",
+      image: "/images/blog/paul_dewhurst.jpg",
+      designation: "Founder, PAACS Software Ltd",
     },
-    tags: ["creative"],
-    publishDate: "2025",
+    tags: ["PAACS", "Mission", "Simulation", "Engineering"],
+    publishDate: "April 1, 2025",
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-02.jpg",
+    slug: "test-blog",
+    title: "A test / template",
+    publishDate: "January 1, 2025",
+    tags: ["Test", "Not real", "Info"],
     author: {
-      name: "Musharof Chy",
+      name: "Fake person",
       image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      designation: "Guest Author",
     },
-    tags: ["computer"],
-    publishDate: "2025",
-  },
-  {
-    id: 3,
-    title: "Tips to quickly improve your coding speed.",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-03.jpg",
-    author: {
-      name: "Lethium Deo",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
-    },
-    tags: ["design"],
-    publishDate: "2025",
+      "A test page, showing off the features and styling of the blogging system",
+    image: "/images/blog/blog-details-02.jpg",
   },
 ];
 export default blogData;

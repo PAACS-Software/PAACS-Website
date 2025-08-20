@@ -1,0 +1,27 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /profile
+Disallow: /signin
+Disallow: /signup
+Disallow: /reset-password
+Disallow: /forgot-password
+Disallow: /auth/callback
+Disallow: /login
+Disallow: /blog-sidebar
+Disallow: /blog/test-blog
+Disallow: /blog-details
+Disallow: /404
+Disallow: /500
+Disallow: /error
+Disallow: /contact-success
+Disallow: /api/*
+Disallow: /category/*
+Disallow: /simulations/*
+Disallow: /feed.xml
+Disallow: /*.html$
+
+# Host
+
+# Sitemaps
+Sitemap: https://paacs.pro/sitemap.xml

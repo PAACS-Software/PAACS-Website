@@ -1,14 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        port: "",
-      },
-    ],
-  },
+  output: "export", // build to /out for static hosting (GitHub Pages, etc.)
+  images: { unoptimized: true }, // needed for static export
+  trailingSlash: true, // (nice-to-have) generates .../index.html pages
 };
-
 module.exports = nextConfig;
