@@ -32,7 +32,7 @@ export default function CookieBanner() {
     if (!process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) return;
 
     // Check if already loaded
-    if (window.gtag) return;
+    //if (window.gtag) return;
 
     // Load GA script
     const script = document.createElement("script");

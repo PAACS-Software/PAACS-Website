@@ -78,16 +78,7 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "PAACS Software",
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#101F37" },
-  ],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    viewportFit: "cover",
-  },
+
   formatDetection: {
     telephone: false,
     date: false,
