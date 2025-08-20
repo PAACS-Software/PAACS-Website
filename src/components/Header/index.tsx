@@ -1,9 +1,11 @@
+// src/components/Header/index.tsx
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
@@ -11,8 +13,15 @@ export default function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [openIndex, setOpenIndex] = useState(-1);
+  const { theme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   const pathname = usePathname();
+
+  // Ensure component is mounted before rendering theme-dependent content
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleStickyNavbar = () => setSticky(window.scrollY >= 80);
@@ -23,6 +32,9 @@ export default function Header() {
   const navbarToggleHandler = () => setNavbarOpen((s) => !s);
   const handleSubmenu = (index: number) =>
     setOpenIndex((i) => (i === index ? -1 : index));
+
+  // Determine current theme
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <header
@@ -42,20 +54,29 @@ export default function Header() {
                 sticky ? "py-5 lg:py-2" : "py-8"
               }`}
             >
-              <Image
-                src="/images/logo/Logo-black.png"
-                alt="logo"
-                width={140}
-                height={30}
-                className="w-full dark:hidden"
-              />
-              <Image
-                src="/images/logo/Logo.png"
-                alt="logo"
-                width={140}
-                height={30}
-                className="hidden w-full dark:block"
-              />
+              {mounted ? (
+                <>
+                  <Image
+                    src="/images/logo/Logo-black.png"
+                    alt="PAACS Logo"
+                    width={140}
+                    height={30}
+                    className={`w-full ${currentTheme === "dark" ? "hidden" : "block"}`}
+                    priority
+                  />
+                  <Image
+                    src="/images/logo/Logo.png"
+                    alt="PAACS Logo"
+                    width={140}
+                    height={30}
+                    className={`w-full ${currentTheme === "dark" ? "block" : "hidden"}`}
+                    priority
+                  />
+                </>
+              ) : (
+                // Placeholder to prevent layout shift
+                <div className="h-[30px] w-[140px]" />
+              )}
             </Link>
           </div>
 
@@ -153,7 +174,7 @@ export default function Header() {
               </nav>
             </div>
 
-            {/* Right side: Auth links (always) + Theme toggle */}
+            {/* Right side: Auth links + Theme toggle */}
             <div className="flex items-center justify-end pr-16 lg:pr-0">
               <Link
                 href="https://user.paacs.pro/signin"

@@ -1,20 +1,21 @@
+// src/app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import posts from "@/app/blog/data/posts";
 import { Metadata } from "next";
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
-
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkDirective from "remark-directive";
 import { visit } from "unist-util-visit";
-
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
-
 import QuoteBox from "@/components/Blog/QuoteBox";
+
+// This is crucial for static generation
+export const dynamicParams = false;
 
 // Plugin to handle :::quote syntax
 const quotePlugin = () => {
@@ -30,27 +31,37 @@ const quotePlugin = () => {
 };
 
 export async function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }));
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
-export async function generateMetadata(props: any): Promise<Metadata> {
-  const { slug } = props.params ?? {};
-  const post = posts.find((p) => p.slug === slug);
-  if (!post) return { title: "Not Found" };
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const post = posts.find((p) => p.slug === params.slug);
 
-  // Auto-generate canonical URL and OpenGraph data
-  const canonicalUrl = `https://paacs.pro/blog/${slug}`;
+  if (!post) {
+    return {
+      title: "Not Found",
+      description: "Blog post not found",
+    };
+  }
+
+  const canonicalUrl = `https://paacs.pro/blog/${params.slug}`;
 
   return {
-    title: `${post.title}`, // Keep under 60 chars
+    title: post.title,
     description: post.description ?? "",
     alternates: {
-      canonical: canonicalUrl, // Correct canonical URL
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: post.title,
       description: post.description ?? "",
-      url: canonicalUrl, // Correct OG URL
+      url: canonicalUrl,
       type: "article",
       publishedTime: post.date,
       authors: [post.author.name],
@@ -75,10 +86,12 @@ export async function generateMetadata(props: any): Promise<Metadata> {
   };
 }
 
-export default function Page(props: any) {
-  const { slug } = props.params ?? {};
-  const post = posts.find((p) => p.slug === slug);
-  if (!post) return notFound();
+export default function BlogPost({ params }: { params: { slug: string } }) {
+  const post = posts.find((p) => p.slug === params.slug);
+
+  if (!post) {
+    notFound();
+  }
 
   return (
     <section className="pb-[120px] pt-[150px]">
@@ -86,29 +99,36 @@ export default function Page(props: any) {
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4 lg:w-8/12">
             <article>
-              {/* Add H1 tag for SEO */}
-              <h1 className="mb-8 text-3xl font-bold text-black dark:text-white sm:text-4xl">
+              <h1 className="mb-8 text-3xl font-bold text-black sm:text-4xl dark:text-white">
                 {post.title}
               </h1>
 
               {/* Author, date, stats */}
-              <div className="mb-10 flex flex-wrap justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
+              <div className="border-body-color mb-10 flex flex-wrap justify-between border-b border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                 <div className="flex flex-wrap items-center">
                   <div className="mb-5 mr-10 flex items-center">
                     <div className="mr-4">
                       <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                        <Image src={post.author.image} alt="author" fill />
+                        <Image
+                          src={
+                            post.author.image ||
+                            "/images/blog/author-placeholder.png"
+                          }
+                          alt={post.author.name}
+                          fill
+                          sizes="40px"
+                        />
                       </div>
                     </div>
                     <div className="w-full">
-                      <span className="text-base font-medium text-body-color">
+                      <span className="text-body-color text-base font-medium">
                         By <span>{post.author.name}</span>
                       </span>
                     </div>
                   </div>
 
                   <div className="mb-5 flex items-center">
-                    <p className="mr-5 flex items-center text-base font-medium text-body-color">
+                    <p className="text-body-color mr-5 flex items-center text-base font-medium">
                       <span className="mr-3">
                         <svg
                           width="15"
@@ -129,101 +149,18 @@ export default function Page(props: any) {
                       </span>
                       {post.date}
                     </p>
-                    <p className="mr-5 flex items-center text-base font-medium text-body-color">
-                      <span className="mr-3">
-                        <svg
-                          width="18"
-                          height="13"
-                          viewBox="0 0 18 13"
-                          className="fill-current"
-                        >
-                          <path d="M15.6375 0H1.6875C0.759375 0 0 0.759375 0 1.6875V10.6875C0 11.3062 0.309375 11.8406 0.84375 12.15C1.09687 12.2906 1.40625 12.375 1.6875 12.375C1.96875 12.375 2.25 12.2906 2.53125 12.15L5.00625 10.7156C5.11875 10.6594 5.23125 10.6312 5.34375 10.6312H15.6094C16.5375 10.6312 17.2969 9.87187 17.2969 8.94375V1.6875C17.325 0.759375 16.5656 0 15.6375 0ZM16.3406 8.94375C16.3406 9.3375 16.0312 9.64687 15.6375 9.64687H5.37187C5.09062 9.64687 4.78125 9.73125 4.52812 9.87187L2.05313 11.3063C1.82812 11.4187 1.575 11.4187 1.35 11.3063C1.125 11.1938 1.0125 10.9688 1.0125 10.7156V1.6875C1.0125 1.29375 1.32188 0.984375 1.71563 0.984375H15.6656C16.0594 0.984375 16.3687 1.29375 16.3687 1.6875V8.94375H16.3406Z" />
-                          <path d="M12.2342 3.375H4.69668C4.41543 3.375 4.19043 3.6 4.19043 3.88125C4.19043 4.1625 4.41543 4.3875 4.69668 4.3875H12.2623C12.5435 4.3875 12.7685 4.1625 12.7685 3.88125C12.7685 3.6 12.5154 3.375 12.2342 3.375Z" />
-                          <path d="M11.0529 6.55322H4.69668C4.41543 6.55322 4.19043 6.77822 4.19043 7.05947C4.19043 7.34072 4.41543 7.56572 4.69668 7.56572H11.0811C11.3623 7.56572 11.5873 7.34072 11.5873 7.05947C11.5873 6.77822 11.3342 6.55322 11.0529 6.55322Z" />
-                        </svg>
-                      </span>
-                      50
-                    </p>
-                    <p className="flex items-center text-base font-medium text-body-color">
-                      <span className="mr-3">
-                        <svg
-                          width="20"
-                          height="12"
-                          viewBox="0 0 20 12"
-                          className="fill-current"
-                        >
-                          <path d="M10.2559 3.8125C9.03711 3.8125 8.06836 4.8125 8.06836 6C8.06836 7.1875 9.06836 8.1875 10.2559 8.1875C11.4434 8.1875 12.4434 7.1875 12.4434 6C12.4434 4.8125 11.4746 3.8125 10.2559 3.8125ZM10.2559 7.09375C9.66211 7.09375 9.16211 6.59375 9.16211 6C9.16211 5.40625 9.66211 4.90625 10.2559 4.90625C10.8496 4.90625 11.3496 5.40625 11.3496 6C11.3496 6.59375 10.8496 7.09375 10.2559 7.09375Z" />
-                          <path d="M19.7559 5.625C17.6934 2.375 14.1309 0.4375 10.2559 0.4375C6.38086 0.4375 2.81836 2.375 0.755859 5.625C0.630859 5.84375 0.630859 6.125 0.755859 6.34375C2.81836 9.59375 6.38086 11.5312 10.2559 11.5312C14.1309 11.5312 17.6934 9.59375 19.7559 6.34375C19.9121 6.125 19.9121 5.84375 19.7559 5.625ZM10.2559 10.4375C6.84961 10.4375 3.69336 8.78125 1.81836 5.96875C3.69336 3.1875 6.84961 1.53125 10.2559 1.53125C13.6621 1.53125 16.8184 3.1875 18.6934 5.96875C16.8184 8.78125 13.6621 10.4375 10.2559 10.4375Z" />
-                        </svg>
-                      </span>
-                      35
-                    </p>
                   </div>
                 </div>
-                <div>
-                  {post.author.linkedin && (
-                    <a
-                      href={post.author.linkedin}
-                      aria-label="LinkedIn"
-                      className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gray-light text-body-color duration-300 hover:bg-primary hover:text-white dark:bg-gray-dark dark:hover:bg-primary sm:ml-3"
-                    >
-                      {/* LinkedIn SVG */}
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        className="fill-current"
-                      >
-                        <path d="M14.3442 0H1.12455C0.499798 0 0 0.497491 0 1.11936V14.3029C0 14.8999 0.499798 15.4222 1.12455 15.4222H14.2942C14.919 15.4222 15.4188 14.9247 15.4188 14.3029V1.09448C15.4688 0.497491 14.969 0 14.3442 0ZM4.57316 13.1089H2.29907V5.7709H4.57316V13.1089ZM3.42362 4.75104C2.67392 4.75104 2.09915 4.15405 2.09915 3.43269C2.09915 2.71133 2.69891 2.11434 3.42362 2.11434C4.14833 2.11434 4.74809 2.71133 4.74809 3.43269C4.74809 4.15405 4.19831 4.75104 3.42362 4.75104ZM13.1947 13.1089H10.9206V9.55183C10.9206 8.7061 10.8956 7.58674 9.72108 7.58674C8.52156 7.58674 8.34663 8.53198 8.34663 9.47721V13.1089H6.07255V5.7709H8.29665V6.79076H8.32164C8.64651 6.19377 9.37122 5.59678 10.4958 5.59678C12.8198 5.59678 13.2447 7.08925 13.2447 9.12897V13.1089H13.1947Z" />
-                      </svg>
-                    </a>
-                  )}
 
-                  {post.author.instagram && (
-                    <a
-                      href={post.author.instagram}
-                      aria-label="Instagram"
-                      className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gray-light text-body-color duration-300 hover:bg-primary hover:text-white dark:bg-gray-dark dark:hover:bg-primary sm:ml-3"
-                    >
-                      {/* Instagram SVG */}
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        className="fill-current"
-                      >
-                        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11zm0 1.5a4 4 0 1 0 0 8a4 4 0 0 0 0-8zm5.25-.75a1 1 0 1 1-2 0a1 1 0 0 1 2 0z" />
-                      </svg>
-                    </a>
-                  )}
-
-                  {post.author.github && (
-                    <a
-                      href={post.author.github}
-                      aria-label="GitHub"
-                      className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gray-light text-body-color duration-300 hover:bg-primary hover:text-white dark:bg-gray-dark dark:hover:bg-primary sm:ml-3"
-                    >
-                      {/* GitHub SVG */}
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        className="fill-current"
-                      >
-                        <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.44c.6.11.82-.26.82-.58v-2.01c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.76.08-.74.08-.74 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.97 0-1.32.47-2.4 1.25-3.24-.13-.31-.54-1.56.12-3.26 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.7.25 2.95.12 3.26.78.84 1.25 1.92 1.25 3.24 0 4.64-2.8 5.67-5.48 5.97.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z" />
-                      </svg>
-                    </a>
-                  )}
-                </div>
                 <div className="mb-5">
-                  <span className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white">
+                  <span className="bg-primary inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold text-white">
                     {post.tags[0]}
                   </span>
                 </div>
               </div>
 
-              {/* Blog content (assumes markdown-style string or HTML-safe) */}
-              <div className="prose mb-10 max-w-none dark:prose-invert">
+              {/* Blog content */}
+              <div className="prose dark:prose-invert mb-10 max-w-none">
                 <ReactMarkdown
                   remarkPlugins={[
                     remarkGfm,
@@ -234,7 +171,7 @@ export default function Page(props: any) {
                   rehypePlugins={[rehypeKatex]}
                   components={
                     {
-                      QuoteBox, // custom directive mapped to custom JSX tag
+                      QuoteBox,
                       code({ inline, className, children, ...props }: any) {
                         return inline ? (
                           <code className="inline">{children}</code>
@@ -267,7 +204,7 @@ export default function Page(props: any) {
               {/* Tags and Share */}
               <div className="items-center justify-between sm:flex">
                 <div className="mb-5">
-                  <h4 className="mb-3 text-sm font-medium text-body-color">
+                  <h4 className="text-body-color mb-3 text-sm font-medium">
                     Popular Tags :
                   </h4>
                   <div className="flex flex-wrap items-center gap-2">
@@ -278,7 +215,7 @@ export default function Page(props: any) {
                 </div>
 
                 <div className="mb-5">
-                  <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
+                  <h5 className="text-body-color mb-3 text-sm font-medium sm:text-right">
                     Share this post :
                   </h5>
                   <div className="flex items-center sm:justify-end">
