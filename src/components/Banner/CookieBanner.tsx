@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer?: any[];
+    gtag?: (...args: any[]) => void;
   }
 }
 
@@ -40,7 +40,7 @@ export default function CookieBanner() {
     }
 
     // Check if already loaded to prevent duplicates
-    if (window.gtag) return;
+    if (typeof window.gtag !== "undefined") return;
 
     // Load GA script
     const script = document.createElement("script");
@@ -50,10 +50,10 @@ export default function CookieBanner() {
       // Initialize GA only after script loads
       window.dataLayer = window.dataLayer || [];
       window.gtag = function () {
-        window.dataLayer.push(arguments);
+        window.dataLayer!.push(arguments);
       };
       window.gtag("js", new Date());
-      window.gtag("config", process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+      window.gtag("config", process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!, {
         anonymize_ip: true,
         page_path: window.location.pathname,
       });
