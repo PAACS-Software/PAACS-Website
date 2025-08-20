@@ -1,24 +1,32 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import AboutHero from "@/components/About/AboutHero";
+import AboutSectionThree from "@/components/About/AboutSectionThree";
+import AboutSectionFour from "@/components/About/AboutSectionFour";
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
-  // other metadata
+  title: "About Us - Computational Engineering",
+  description:
+    "Learn about PAACS Software Ltd, our mission to democratize engineering simulation, and our team of computational physics experts.",
+  alternates: {
+    canonical: "https://paacs.pro/about",
+  },
+  openGraph: {
+    url: "https://paacs.pro/about",
+  },
 };
 
 const AboutPage = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
+      <AboutHero />
       <AboutSectionOne />
       <AboutSectionTwo />
+      <AboutSectionThree />
+      <AboutSectionFour />
     </>
   );
 };
