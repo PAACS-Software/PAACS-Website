@@ -60,7 +60,7 @@ export default function StructuredData() {
         "@type": "ContactPoint",
         contactType: "Customer Support",
         email: "support@paacs.pro",
-        url: "https://paacs.pro/contact",
+        url: "https://user.paacs.pro/contact",
         availableLanguage: ["en"],
       },
     ],

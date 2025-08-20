@@ -52,7 +52,7 @@ const menuData: Menu[] = [
       {
         id: 81,
         title: "Contact",
-        path: "/contact",
+        path: "https://user.paacs.pro/contact",
         newTab: false,
       },
       {
@@ -76,7 +76,7 @@ const menuData: Menu[] = [
       {
         id: 85,
         title: "Forgot Password",
-        path: "/forgot-password",
+        path: "https://user.paacs.pro/forgot-password",
         newTab: false,
       },
     ],
@@ -124,25 +124,25 @@ const menuData: Menu[] = [
       {
         id: 46,
         title: "Sign In",
-        path: "/signin",
+        path: "https://user.paacs.pro/signin",
         newTab: false,
       },
       {
         id: 47,
         title: "Sign Up",
-        path: "/signup",
+        path: "https://user.paacs.pro/signup",
         newTab: false,
       },
       {
         id: 48,
         title: "Profile",
-        path: "/profile",
+        path: "https://user.paacs.pro/profile",
         newTab: false,
       },
       {
         id: 49,
         title: "Forgot Password",
-        path: "/forgot-password",
+        path: "https://user.paacs.pro/forgot-password",
         newTab: false,
       },
     ],

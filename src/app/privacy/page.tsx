@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - PAACS Software",
+  title: "Privacy Policy - Commitment to privacy & data collection practices,",
   description:
     "How PAACS Software protects your data. Our commitment to privacy, data collection practices, and your rights under GDPR and privacy laws.",
   alternates: {

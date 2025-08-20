@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions - PAACS Software",
+  title: "Terms & Conditions - Legal terms & acceptable use policy",
   description:
     "Terms of service for PAACS Software usage. Legal terms, acceptable use policy, and user responsibilities for our simulation platform.",
   alternates: {
