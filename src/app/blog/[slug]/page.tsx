@@ -86,12 +86,15 @@ export async function generateMetadata({
   };
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = posts.find((p) => p.slug === params.slug);
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
-  if (!post) {
-    notFound();
-  }
+  const post = posts.find((p) => p.slug === slug);
+  if (!post) notFound();
 
   return (
     <section className="pb-[120px] pt-[150px]">
