@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://paacs.pro/privacy",
   },
-  openGraph: {
-    url: "https://paacs.pro/privacy",
-  },
 };
 
 export default function PrivacyPolicy() {

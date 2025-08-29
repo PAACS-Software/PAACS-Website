@@ -10,9 +10,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://paacs.pro/download",
   },
-  openGraph: {
-    url: "https://paacs.pro/download",
-  },
 };
 
 const DownloadPage = () => {

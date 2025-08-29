@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://paacs.pro/terms",
   },
-  openGraph: {
-    url: "https://paacs.pro/terms",
-  },
 };
 
 export default function TermsAndConditions() {

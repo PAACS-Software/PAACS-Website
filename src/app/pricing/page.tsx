@@ -10,9 +10,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://paacs.pro/pricing",
   },
-  openGraph: {
-    url: "https://paacs.pro/pricing",
-  },
 };
 
 const PricingPage = () => {

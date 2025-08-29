@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://paacs.pro/cookie-policy",
   },
-  openGraph: {
-    url: "https://paacs.pro/cookie-policy",
-  },
 };
 
 export default function CookiePolicy() {

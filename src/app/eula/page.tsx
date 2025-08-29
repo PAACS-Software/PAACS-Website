@@ -11,9 +11,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://paacs.pro/eula",
   },
-  openGraph: {
-    url: "https://paacs.pro/eula",
-  },
 };
 
 export default function EULA() {
