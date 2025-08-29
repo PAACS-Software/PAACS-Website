@@ -24,9 +24,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://paacs.pro",
   },
-  openGraph: {
-    url: "https://paacs.pro",
-  },
 };
 
 export default function Home() {
