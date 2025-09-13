@@ -4,8 +4,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import AboutHero from "@/components/About/AboutHero";
 import AboutSectionThree from "@/components/About/AboutSectionThree";
 import AboutSectionFour from "@/components/About/AboutSectionFour";
-
 import { Metadata } from "next";
+import Gap from "@/components/MobileGap/Gap";
 
 export const metadata: Metadata = {
   title: "About Us - Computational Engineering",
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <>
+      <Gap bgClassName="bg-primary bg-opacity-5" />
       <AboutHero />
       <AboutSectionOne />
       <AboutSectionTwo />

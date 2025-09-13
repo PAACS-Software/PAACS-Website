@@ -1,5 +1,6 @@
 import Pricing from "@/components/Pricing";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import Gap from "@/components/MobileGap/Gap";
 
 import { Metadata } from "next";
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 const PricingPage = () => {
   return (
     <>
+      <Gap />
       <Pricing />
     </>
   );

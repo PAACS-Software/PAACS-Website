@@ -84,6 +84,8 @@ const AboutSectionFour = () => {
           </div>
         </div>
 
+        {/*
+
         <div className="mb-16">
           <h3 className="mb-8 text-center text-2xl font-bold text-black dark:text-white">
             Academic Ecosystem
@@ -138,6 +140,7 @@ const AboutSectionFour = () => {
             </div>
           </div>
         </div>
+        */}
 
         {/* Acknowledgements without claiming contributions */}
         <div className="rounded-lg bg-primary bg-opacity-5 p-8">
@@ -147,12 +150,11 @@ const AboutSectionFour = () => {
           <p className="mx-auto mb-4 max-w-3xl text-center text-base leading-relaxed text-body-color">
             PAACS is made possible by outstanding open-source projects,
             including
-            <span className="whitespace-nowrap"> Open CASCADE Technology</span>,
-            <span className="whitespace-nowrap"> Kratos Multiphysics</span>,
-            <span className="whitespace-nowrap"> MMG</span>, and
-            <span className="whitespace-nowrap"> Slint</span>. We are grateful
-            to the maintainers, researchers, and contributors behind these
-            tools.
+            <span className="whitespace"> Open CASCADE Technology</span>,
+            <span className="whitespace"> Kratos Multiphysics</span>,
+            <span className="whitespace"> MMG</span>, and
+            <span className="whitespace"> Slint</span>. We are grateful to the
+            maintainers, researchers, and contributors behind these tools.
           </p>
           <p className="mx-auto max-w-3xl text-center text-base leading-relaxed text-body-color">
             While PAACS is a proprietary product, we carefully observe upstream

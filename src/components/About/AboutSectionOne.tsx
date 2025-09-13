@@ -13,8 +13,8 @@ const AboutSectionOne = () => {
   type ListProps = { text: string };
 
   const List: React.FC<ListProps> = ({ text }) => (
-    <p className="text-body-color mb-5 flex items-center text-lg font-medium">
-      <span className="bg-primary text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-opacity-10">
+    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
         {checkIcon}
       </span>
       {text}
@@ -24,12 +24,12 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
-        <div className="border-body-color/[.15] border-b pb-16 md:pb-20 lg:pb-28 dark:border-white/[.15]">
+        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Crafted for Reseachers and Engineers"
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                paragraph="PAACS is designed to empower researchers and engineers with advanced simulation capabilities, enabling them to tackle complex physical problems with confidence and precision. We utlise a node interface for quick iterations, while also providing a scriptable Python backend for full customisation and automation."
                 mb="44px"
               />
 

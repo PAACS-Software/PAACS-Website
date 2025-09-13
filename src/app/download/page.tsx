@@ -1,5 +1,6 @@
 import Download from "@/components/Download";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import Gap from "@/components/MobileGap/Gap";
 
 import { Metadata } from "next";
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 const DownloadPage = () => {
   return (
     <>
+      <Gap />
       <Download />
     </>
   );

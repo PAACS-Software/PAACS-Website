@@ -10,15 +10,16 @@ const AboutHero = () => {
             About PAACS Software
           </h1>
           <p className="mb-8 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-            From Scottish Innovation to Global Engineering Solutions
+            <span className="font-extrabold">
+              Physics Applications And Computational Simulations
+            </span>{" "}
+            <span className="text-sm opacity-70">(PAACS)</span>
           </p>
           <p className="mx-auto max-w-[700px] text-base leading-relaxed text-body-color dark:text-body-color-dark">
-            Founded in 2024 in Scotland, PAACS Software Ltd represents the
-            convergence of traditional engineering excellence and cutting-edge
-            computational technology. Our journey from the industrial hub of
-            Glasgow - Scotland, to our new presence in Texas reflects our
-            commitment to serving the global engineering community with
-            world-class simulation tools.
+            Founded in 2024 in Scotland, PAACS Software Ltd specialises in
+            computational simulations with a focus on the Finite Element Method
+            (FEM). Our mission is to give you tools to simulate complex physical
+            systems with ease and accuracy.
           </p>
         </div>
       </div>
