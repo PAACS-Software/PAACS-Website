@@ -17,19 +17,19 @@ const blogData: Blog[] = [
     publishDate: "April 1, 2025",
   },
   {
-    id: 2,
-    slug: "test-blog",
-    title: "A test / template",
-    publishDate: "January 1, 2025",
-    tags: ["Test", "Not real", "Info"],
-    author: {
-      name: "Fake person",
-      image: "/images/blog/author-02.png",
-      designation: "Guest Author",
-    },
+    id: 3,
+    slug: "fea-linear-mathematics",
+    title: "The Mathematics of Linear FEA",
     paragraph:
-      "A test page, showing off the features and styling of the blogging system",
-    image: "/images/blog/blog-details-02.jpg",
+      "Explore the fundamental equation of linear Finite Element Analysis (FEA): K·u = f. Understand how stiffness matrices, displacement vectors, and force vectors interact to simulate structural behavior.",
+    image: "/images/blog/Logo_page-0002.jpg",
+    author: {
+      name: "Paul Dewhurst",
+      image: "/images/blog/paul_dewhurst.jpg",
+      designation: "Founder, PAACS Software Ltd",
+    },
+    tags: ["FEA", "Mathematics", "Structural Analysis", "Tutorial"],
+    publishDate: "August 15, 2025",
   },
 ];
 export default blogData;
