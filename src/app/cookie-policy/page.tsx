@@ -17,144 +17,346 @@ export default function CookiePolicy() {
       <h1 className="mb-6 text-3xl font-bold">Cookie Policy</h1>
 
       <p className="mt-2 text-xs italic text-gray-600 dark:text-gray-400">
-        Last updated: March 31, 2025
+        Effective Date: November 1, 2025
+      </p>
+      <p className="mt-1 text-xs italic text-gray-600 dark:text-gray-400">
+        Last Updated: November 1, 2025
+      </p>
+      <p className="mt-1 text-xs italic text-gray-600 dark:text-gray-400">
+        Version: 1.0.0
       </p>
 
-      <p className="mt-4">
-        This Cookie Policy explains how PAACS Software Ltd (&ldquo;we&rdquo;,
-        &ldquo;us&rdquo;, or &ldquo;our&rdquo;) uses cookies and related
-        technologies on our website. It complements our{" "}
+      <div className="mt-4 rounded-lg bg-blue-50 p-4 dark:bg-blue-900/20">
+        <p className="text-sm font-medium">
+          This Cookie Policy is legally binding and forms part of our website
+          terms of use. By continuing to use our website, you consent to our use
+          of cookies as described herein.
+        </p>
+      </div>
+
+      <h2 className="mt-6 text-xl font-semibold">1. Introduction</h2>
+      <p>
+        PAACS Software Ltd (&ldquo;PAACS&rdquo;, &ldquo;we&rdquo;,
+        &ldquo;us&rdquo;, or &ldquo;our&rdquo;), a company registered in England
+        and Wales, uses cookies and similar tracking technologies on our website
+        located at https://paacs.pro and all subdomains (the
+        &ldquo;Website&rdquo;). This Cookie Policy explains what cookies are,
+        how we use them, and your rights and choices regarding their use.
+      </p>
+      <p className="mt-2">
+        This Policy should be read in conjunction with our{" "}
         <a href="/privacy" className="underline">
           Privacy Policy
         </a>
-        , which further describes how we protect your personal data.
+        , which provides additional information about how we collect, use, and
+        protect your personal data.
       </p>
 
-      <h2 className="mt-6 text-xl font-semibold">What Are Cookies?</h2>
+      <h2 className="mt-6 text-xl font-semibold">2. What Are Cookies?</h2>
       <p>
-        Cookies are small text files placed on your device when you visit a
-        website. They help the site recognize your device, remember your
-        preferences, and enhance your browsing experience. Some cookies last
-        only for the duration of your session and are deleted when you close
-        your browser (“session cookies”), while others may remain on your device
-        for a set period of time (“persistent cookies”).
+        Cookies are small text files consisting of letters and numbers that are
+        placed on your computer, mobile device, or other equipment when you
+        access our Website. The web server sends cookies to your browser, which
+        stores them and sends them back to the server each time you visit our
+        Website.
+      </p>
+      <p className="mt-2">
+        Cookies enable websites to recognize your device and remember
+        information about your visit, such as your preferred settings, login
+        status, and browsing behavior. They cannot harm your computer, spread
+        viruses, or access personal information stored on your hard drive.
       </p>
 
-      <h2 className="mt-6 text-xl font-semibold">Types of Cookies We Use</h2>
+      <h2 className="mt-6 text-xl font-semibold">
+        3. Categories of Cookies We Use
+      </h2>
+
+      <h3 className="mt-4 text-lg font-medium">
+        3.1 Strictly Necessary Cookies
+      </h3>
       <ul className="ml-5 list-disc">
         <li>
-          <strong>Essential Cookies</strong>: These are necessary for the
-          website’s core features, such as user authentication, security, and
-          remembering items in your cart (if applicable). Without these cookies,
-          our site may not function properly.
+          <strong>Purpose:</strong> Essential for website operation and security
         </li>
         <li>
-          <strong>Analytics Cookies</strong>: These cookies collect information
-          about how you interact with our site (e.g., pages visited, time on
-          site). We use this data to improve site performance and understand
-          user behavior. A common tool here is <strong>Google Analytics</strong>
-          .
+          <strong>Function:</strong> Enable core functionality including user
+          authentication, session management, security features, and load
+          balancing
         </li>
         <li>
-          <strong>Security & Anti-Spam Cookies</strong>: For example,{" "}
-          <strong>Google reCAPTCHA</strong> places cookies to differentiate
-          human users from bots (
+          <strong>Examples:</strong> Session ID cookies, authentication tokens,
+          CSRF protection cookies
+        </li>
+        <li>
+          <strong>Retention:</strong> Session duration or up to 24 hours
+        </li>
+        <li>
+          <strong>Legal Basis:</strong> Legitimate interests (Article 6(1)(f)
+          GDPR)
+        </li>
+      </ul>
+
+      <h3 className="mt-4 text-lg font-medium">
+        3.2 Performance/Analytics Cookies
+      </h3>
+      <ul className="ml-5 list-disc">
+        <li>
+          <strong>Purpose:</strong> Collect aggregated information about website
+          usage
+        </li>
+        <li>
+          <strong>Function:</strong> Help us understand visitor behavior,
+          identify technical issues, and improve website performance
+        </li>
+        <li>
+          <strong>Provider:</strong> Google Analytics (GA4)
+        </li>
+        <li>
+          <strong>Data Collected:</strong> Page views, session duration, bounce
+          rates, traffic sources, anonymized IP addresses
+        </li>
+        <li>
+          <strong>Retention:</strong> Up to 26 months
+        </li>
+        <li>
+          <strong>Legal Basis:</strong> Consent (Article 6(1)(a) GDPR)
+        </li>
+      </ul>
+
+      <h3 className="mt-4 text-lg font-medium">3.3 Functionality Cookies</h3>
+      <ul className="ml-5 list-disc">
+        <li>
+          <strong>Purpose:</strong> Remember your preferences and choices
+        </li>
+        <li>
+          <strong>Function:</strong> Store settings such as language preference,
+          theme selection (light/dark mode), cookie consent status
+        </li>
+        <li>
+          <strong>Retention:</strong> Up to 12 months
+        </li>
+        <li>
+          <strong>Legal Basis:</strong> Consent (Article 6(1)(a) GDPR)
+        </li>
+      </ul>
+
+      <h3 className="mt-4 text-lg font-medium">3.4 Security Cookies</h3>
+      <ul className="ml-5 list-disc">
+        <li>
+          <strong>Purpose:</strong> Protect against automated abuse and spam
+        </li>
+        <li>
+          <strong>Provider:</strong> Google reCAPTCHA v3
+        </li>
+        <li>
+          <strong>Function:</strong> Distinguish between human users and bots
+        </li>
+        <li>
+          <strong>Data Processing:</strong> Subject to{" "}
           <a href="https://policies.google.com/privacy" className="underline">
-            Google Privacy Policy
+            Google&apos;s Privacy Policy
           </a>{" "}
           and{" "}
           <a href="https://policies.google.com/terms" className="underline">
             Terms of Service
           </a>
-          ). This helps protect our forms and other site features from spam or
-          abuse.
         </li>
         <li>
-          <strong>Functional Cookies (Soon to be implemented)</strong>: Cookies
-          that remember your preferences (e.g., language selection, theme).
-          While not essential, they enhance usability.
+          <strong>Retention:</strong> Up to 6 months
+        </li>
+        <li>
+          <strong>Legal Basis:</strong> Legitimate interests (Article 6(1)(f)
+          GDPR)
         </li>
       </ul>
 
-      <h2 className="mt-6 text-xl font-semibold">Why We Use Cookies</h2>
-      <p>We use cookies to:</p>
-      <ul className="ml-5 list-disc">
-        <li>Provide a secure login process</li>
-        <li>Save your cookie preferences and other settings</li>
-        <li>Improve site performance and user experience</li>
-        <li>Protect against spam, bots, and unauthorized access</li>
-        <li>
-          Analyze how the site is used so we can enhance content and
-          functionality
-        </li>
-      </ul>
-
-      <h2 className="mt-6 text-xl font-semibold">
-        Managing Your Cookie Preferences
-      </h2>
-      <p>You can manage or disable cookies at any time via:</p>
-      <ul className="ml-5 list-disc">
-        <li>
-          Our cookie banner or “Manage Cookies” link (if provided) to
-          accept/decline certain categories of cookies.
-        </li>
-        <li>
-          Your browser settings, where you can block or delete cookies. Note
-          that blocking essential cookies may limit some core functionality of
-          our site.
-        </li>
-      </ul>
-
-      <h2 className="mt-6 text-xl font-semibold">Third-Party Cookies</h2>
+      <h2 className="mt-6 text-xl font-semibold">4. Third-Party Cookies</h2>
       <p>
-        Some features on our site may use cookies from third-party providers
-        (e.g., Google, GitHub). These providers may have their own cookie
-        policies. We encourage you to review their policies for more
-        information:
+        We use services from trusted third-party providers that may set their
+        own cookies:
       </p>
-      <ul className="ml-5 list-disc">
+      <ul className="ml-5 mt-2 list-disc">
         <li>
+          <strong>Google Analytics:</strong> For website analytics.{" "}
           <a
             href="https://policies.google.com/technologies/cookies"
             className="underline"
           >
-            Google Cookie Policy
+            Google&apos;s Cookie Policy
           </a>
         </li>
-        <li>Other providers as relevant (e.g. GitHub, OAuth providers)</li>
+        <li>
+          <strong>Google reCAPTCHA:</strong> For security and spam prevention.{" "}
+          <a href="https://policies.google.com/privacy" className="underline">
+            Google Privacy Policy
+          </a>
+        </li>
+        <li>
+          <strong>OAuth Providers:</strong> When you choose to authenticate
+          using GitHub or Google, these providers may set cookies for
+          authentication purposes
+        </li>
+        <li>
+          <strong>Cloudflare:</strong> For content delivery and DDoS protection.{" "}
+          <a
+            href="https://www.cloudflare.com/cookie-policy/"
+            className="underline"
+          >
+            Cloudflare Cookie Policy
+          </a>
+        </li>
       </ul>
 
-      <h2 className="mt-6 text-xl font-semibold">Cookie Retention</h2>
+      <h2 className="mt-6 text-xl font-semibold">
+        5. Cookie Management and Your Rights
+      </h2>
+
+      <h3 className="mt-4 text-lg font-medium">5.1 Cookie Consent</h3>
       <p>
-        The duration a cookie stays on your device depends on whether it is
-        “session” or “persistent.” Session cookies are deleted once you close
-        your browser. Persistent cookies remain stored even after a browser is
-        closed, up to their set expiration date or until manually removed.
+        Upon your first visit to our Website, you will be presented with a
+        cookie banner that allows you to:
       </p>
+      <ul className="ml-5 mt-2 list-disc">
+        <li>Accept all cookies</li>
+        <li>Reject non-essential cookies</li>
+        <li>Customize your cookie preferences by category</li>
+      </ul>
+      <p className="mt-2">
+        Your preferences are stored for 12 months, after which you will be asked
+        to confirm them again.
+      </p>
+
+      <h3 className="mt-4 text-lg font-medium">5.2 Browser Controls</h3>
+      <p>
+        Most web browsers allow you to control cookies through their settings.
+        You can:
+      </p>
+      <ul className="ml-5 mt-2 list-disc">
+        <li>View what cookies are stored on your device</li>
+        <li>Delete cookies individually or entirely</li>
+        <li>Block third-party cookies</li>
+        <li>Block all cookies from specific websites</li>
+        <li>Block all cookies from being set</li>
+        <li>Enable "Do Not Track" signals</li>
+      </ul>
+
+      <h3 className="mt-4 text-lg font-medium">
+        5.3 Impact of Disabling Cookies
+      </h3>
+      <p className="font-medium">
+        Please note that disabling certain cookies may impact your use of our
+        Website:
+      </p>
+      <ul className="ml-5 mt-2 list-disc">
+        <li>
+          <strong>Strictly Necessary Cookies:</strong> Disabling these will
+          prevent you from accessing secure areas, maintaining login sessions,
+          or using core functionality
+        </li>
+        <li>
+          <strong>Performance Cookies:</strong> We will be unable to gather
+          analytics to improve our services
+        </li>
+        <li>
+          <strong>Functionality Cookies:</strong> Your preferences will not be
+          remembered between visits
+        </li>
+      </ul>
 
       <h2 className="mt-6 text-xl font-semibold">
-        Changes to This Cookie Policy
+        6. Data Protection and Security
       </h2>
       <p>
-        We may update this Cookie Policy periodically to reflect changes in our
-        practices or relevant laws. We’ll notify you of any significant changes
-        via our site or your user dashboard. Continued use of our site after
-        such updates indicates acceptance of the new policy.
+        We implement appropriate technical and organizational measures to
+        protect cookie data:
+      </p>
+      <ul className="ml-5 mt-2 list-disc">
+        <li>All cookies containing sensitive data are encrypted</li>
+        <li>Secure flags are set on all authentication cookies</li>
+        <li>
+          HttpOnly flags prevent client-side script access where appropriate
+        </li>
+        <li>SameSite attributes protect against CSRF attacks</li>
+        <li>Regular security audits and updates</li>
+      </ul>
+
+      <h2 className="mt-6 text-xl font-semibold">
+        7. International Data Transfers
+      </h2>
+      <p>
+        Some of our third-party cookie providers process data outside the
+        European Economic Area (EEA) and United Kingdom. Where this occurs, we
+        ensure appropriate safeguards are in place, such as:
+      </p>
+      <ul className="ml-5 mt-2 list-disc">
+        <li>EU-approved Standard Contractual Clauses</li>
+        <li>Adequacy decisions by the European Commission</li>
+        <li>Privacy Shield certification (where applicable)</li>
+      </ul>
+
+      <h2 className="mt-6 text-xl font-semibold">8. Children&apos;s Privacy</h2>
+      <p>
+        Our Website is not intended for children under 13 years of age. We do
+        not knowingly collect personal information from children under 13
+        through cookies. If you believe we have inadvertently collected such
+        information, please contact us immediately.
       </p>
 
-      <h2 className="mt-6 text-xl font-semibold">Contact Us</h2>
+      <h2 className="mt-6 text-xl font-semibold">9. Updates to This Policy</h2>
       <p>
-        If you have questions or concerns about our Cookie Policy, please email
-        us at{" "}
-        <a href="mailto:support@paacs.pro" className="underline">
-          support@paacs.pro
-        </a>
-        . You can also refer to our{" "}
-        <a href="/privacy" className="underline">
-          Privacy Policy
-        </a>{" "}
-        for more details on how we handle your personal data.
+        We reserve the right to update this Cookie Policy at any time to reflect
+        changes in our practices, technologies, legal requirements, or for other
+        operational reasons. Updates will be posted on this page with a revised
+        "Last Updated" date. Material changes will be communicated through:
       </p>
+      <ul className="ml-5 mt-2 list-disc">
+        <li>A prominent notice on our Website</li>
+        <li>Email notification to registered users (where applicable)</li>
+        <li>A renewed request for cookie consent</li>
+      </ul>
+
+      <h2 className="mt-6 text-xl font-semibold">10. Contact Information</h2>
+      <p>
+        For questions, concerns, or requests regarding this Cookie Policy or our
+        use of cookies, please contact us:
+      </p>
+      <div className="ml-5 mt-2">
+        <p>
+          <strong>PAACS Software Ltd</strong>
+        </p>
+        <p>Data Protection Officer</p>
+        <p>
+          Email:{" "}
+          <a href="mailto:privacy@paacs.pro" className="underline">
+            privacy@paacs.pro
+          </a>
+        </p>
+        <p>
+          Alternative:{" "}
+          <a href="mailto:support@paacs.pro" className="underline">
+            support@paacs.pro
+          </a>
+        </p>
+      </div>
+
+      <h2 className="mt-6 text-xl font-semibold">11. Regulatory Information</h2>
+      <p>
+        You have the right to lodge a complaint with a supervisory authority if
+        you believe our use of cookies infringes applicable data protection
+        laws:
+      </p>
+      <div className="ml-5 mt-2">
+        <p>
+          <strong>UK Information Commissioner&apos;s Office (ICO)</strong>
+        </p>
+        <p>
+          Website:{" "}
+          <a href="https://ico.org.uk/" className="underline">
+            ico.org.uk
+          </a>
+        </p>
+        <p>Phone: 0303 123 1113</p>
+      </div>
     </div>
   );
 }
