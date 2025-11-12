@@ -30,7 +30,7 @@ export default function VideoModal({ isOpen, onClose, ...props }: PropsType) {
       <div className="relative w-full max-w-4xl bg-gray-900">
         <button
           onClick={onClose}
-          className="absolute -top-2 -right-4 translate-x-full text-7xl leading-none text-white"
+          className="absolute -right-4 -top-2 translate-x-full text-7xl leading-none text-white"
         >
           <span className="sr-only">Close modal</span>
           &times;

@@ -88,7 +88,7 @@ export default function CookieBanner() {
           We use cookies for analytics to improve your experience. See our{" "}
           <a
             href="/privacy"
-            className="text-primary hover:text-primary/80 underline transition-colors"
+            className="text-primary underline transition-colors hover:text-primary/80"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -99,7 +99,7 @@ export default function CookieBanner() {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => handleChoice(true)}
-            className="bg-primary hover:bg-primary/90 rounded px-4 py-2 text-sm font-medium text-white transition"
+            className="rounded bg-primary px-4 py-2 text-sm font-medium text-white transition hover:bg-primary/90"
           >
             Accept
           </button>

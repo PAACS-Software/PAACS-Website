@@ -91,12 +91,12 @@ export default async function BlogPost({
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4 lg:w-8/12">
             <article>
-              <h1 className="mb-8 text-3xl font-bold text-black sm:text-4xl dark:text-white">
+              <h1 className="mb-8 text-3xl font-bold text-black dark:text-white sm:text-4xl">
                 {post.title}
               </h1>
 
               {/* Author, date, stats */}
-              <div className="border-body-color mb-10 flex flex-wrap justify-between border-b border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
+              <div className="mb-10 flex flex-wrap justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                 <div className="flex flex-wrap items-center">
                   <div className="mb-5 mr-10 flex items-center">
                     <div className="mr-4">
@@ -113,14 +113,14 @@ export default async function BlogPost({
                       </div>
                     </div>
                     <div className="w-full">
-                      <span className="text-body-color text-base font-medium">
+                      <span className="text-base font-medium text-body-color">
                         By <span>{post.author.name}</span>
                       </span>
                     </div>
                   </div>
 
                   <div className="mb-5 flex items-center">
-                    <p className="text-body-color mr-5 flex items-center text-base font-medium">
+                    <p className="mr-5 flex items-center text-base font-medium text-body-color">
                       <span className="mr-3">
                         {/* calendar icon */}
                         <svg
@@ -146,14 +146,14 @@ export default async function BlogPost({
                 </div>
 
                 <div className="mb-5">
-                  <span className="bg-primary inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold text-white">
+                  <span className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white">
                     {post.tags[0]}
                   </span>
                 </div>
               </div>
 
               {/* Blog content */}
-              <div className="prose dark:prose-invert mb-10 max-w-none">
+              <div className="prose mb-10 max-w-none dark:prose-invert">
                 <ReactMarkdown
                   remarkPlugins={[
                     remarkGfm,
@@ -197,7 +197,7 @@ export default async function BlogPost({
               {/* Tags and Share */}
               <div className="items-center justify-between sm:flex">
                 <div className="mb-5">
-                  <h4 className="text-body-color mb-3 text-sm font-medium">
+                  <h4 className="mb-3 text-sm font-medium text-body-color">
                     Popular Tags :
                   </h4>
                   <div className="flex flex-wrap items-center gap-2">
@@ -208,7 +208,7 @@ export default async function BlogPost({
                 </div>
 
                 <div className="mb-5">
-                  <h5 className="text-body-color mb-3 text-sm font-medium sm:text-right">
+                  <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
                     Share this post :
                   </h5>
                   <div className="flex items-center sm:justify-end">
