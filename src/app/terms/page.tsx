@@ -238,7 +238,7 @@ export default function TermsAndConditions() {
       <p>You represent and warrant that:</p>
       <ul className="ml-5 mt-2 list-disc">
         <li>You own or have rights to use your User Content</li>
-        <li>Your User Content doesn't infringe third-party rights</li>
+        <li>Your User Content doesn&apos;t infringe third-party rights</li>
         <li>Your User Content complies with all applicable laws</li>
         <li>You have necessary consents for any personal data</li>
       </ul>
@@ -405,7 +405,9 @@ export default function TermsAndConditions() {
       <h3 className="mt-4 text-lg font-medium">9.2 Disclaimers</h3>
       <p className="font-semibold">TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
       <ul className="ml-5 mt-2 list-disc">
-        <li>SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE"</li>
+        <li>
+          SERVICES ARE PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot;
+        </li>
         <li>WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED</li>
         <li>
           INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
@@ -627,20 +629,23 @@ export default function TermsAndConditions() {
 
       <h3 className="mt-4 text-lg font-medium">14.9 Government Users</h3>
       <p>
-        If you are a government entity, our Services are "commercial items" as
-        defined in applicable regulations, provided with only those rights
-        granted to all other users under these Terms.
+        If you are a government entity, our Services are &quot;commercial
+        items&quot; as defined in applicable regulations, provided with only
+        those rights granted to all other users under these Terms.
       </p>
 
       <h2 className="mt-6 text-xl font-semibold">15. BETA FEATURES</h2>
 
       <h3 className="mt-4 text-lg font-medium">15.1 Beta Services</h3>
-      <p>Features labeled as "beta," "preview," "early access," or similar:</p>
+      <p>
+        Features labeled as &quot;beta,&quot; &quot;preview,&quot; &quot;early
+        access,&quot; or similar:
+      </p>
       <ul className="ml-5 mt-2 list-disc">
         <li>Are provided for testing and evaluation</li>
         <li>May be incomplete or contain errors</li>
         <li>May be discontinued at any time</li>
-        <li>Are provided "AS IS" with no warranties</li>
+        <li>Are provided &quot;AS IS&quot; with no warranties</li>
         <li>Should not be used for production or critical purposes</li>
       </ul>
 

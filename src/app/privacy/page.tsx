@@ -486,7 +486,7 @@ export default function PrivacyPolicy() {
       <ul className="ml-5 mt-2 list-disc">
         <li>Know what personal information is collected</li>
         <li>Know if information is sold or disclosed (we do not sell)</li>
-        <li>Opt-out of sale (not applicable as we don't sell)</li>
+        <li>Opt-out of sale (not applicable as we don&apos;t sell)</li>
         <li>Non-discrimination for exercising rights</li>
         <li>Limit use of sensitive personal information</li>
       </ul>
@@ -509,7 +509,9 @@ export default function PrivacyPolicy() {
         <li>Do Not Track signal respect (optional)</li>
       </ul>
 
-      <h2 className="mt-6 text-xl font-semibold">11. CHILDREN'S PRIVACY</h2>
+      <h2 className="mt-6 text-xl font-semibold">
+        11. CHILDREN&apos;S PRIVACY
+      </h2>
       <p>
         Our services are not intended for children under 13 (or 16 in certain
         jurisdictions). We do not knowingly collect data from children. If we
@@ -607,7 +609,7 @@ export default function PrivacyPolicy() {
       <p>You have the right to lodge a complaint with:</p>
       <div className="ml-5 mt-2">
         <p>
-          <strong>UK Information Commissioner's Office (ICO)</strong>
+          <strong>UK Information Commissioner&apos;s Office (ICO)</strong>
         </p>
         <p>Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF</p>
         <p>Phone: 0303 123 1113</p>
@@ -637,7 +639,7 @@ export default function PrivacyPolicy() {
         <p className="mt-2 text-sm">
           We are committed to protecting your privacy and handling your data
           responsibly. If you have any questions or concerns about our privacy
-          practices, please don't hesitate to contact our Data Protection
+          practices, please don&apos;t hesitate to contact our Data Protection
           Officer.
         </p>
       </div>

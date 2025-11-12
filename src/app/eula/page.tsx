@@ -362,7 +362,7 @@ export default function EULA() {
         You agree to defend, indemnify, and hold harmless the Company, its
         affiliates, officers, directors, employees, and agents from and against
         all claims, damages, losses, expenses, and costs (including reasonable
-        attorneys' fees) arising from:
+        attorneys&apos; fees) arising from:
       </p>
       <ul className="ml-5 mt-2 list-disc">
         <li>Your breach of this Agreement</li>
@@ -440,7 +440,7 @@ export default function EULA() {
 
       <h3 className="mt-4 text-lg font-medium">12.3 Arbitration</h3>
       <p>
-        At the Company's option, disputes may be resolved through binding
+        At the Company&apos;s option, disputes may be resolved through binding
         arbitration under the rules of the London Court of International
         Arbitration (LCIA).
       </p>

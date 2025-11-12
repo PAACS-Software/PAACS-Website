@@ -237,7 +237,7 @@ export default function CookiePolicy() {
         <li>Block third-party cookies</li>
         <li>Block all cookies from specific websites</li>
         <li>Block all cookies from being set</li>
-        <li>Enable "Do Not Track" signals</li>
+        <li>Enable &quot;Do Not Track&quot; signals</li>
       </ul>
 
       <h3 className="mt-4 text-lg font-medium">
@@ -307,7 +307,8 @@ export default function CookiePolicy() {
         We reserve the right to update this Cookie Policy at any time to reflect
         changes in our practices, technologies, legal requirements, or for other
         operational reasons. Updates will be posted on this page with a revised
-        "Last Updated" date. Material changes will be communicated through:
+        &quot;Last Updated&quot; date. Material changes will be communicated
+        through:
       </p>
       <ul className="ml-5 mt-2 list-disc">
         <li>A prominent notice on our Website</li>
