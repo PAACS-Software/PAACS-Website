@@ -18,26 +18,25 @@ const inter = localFont({
   display: "swap",
 });
 
+const siteDescription =
+  "PAACS Software is developing PAACS Mesh for surface and volume meshing, mesh checks, and export. Multiphysics modelling is planned for a later stage.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://paacs.pro"),
   applicationName: "PAACS Software",
   category: "technology",
   title: {
-    default: "PAACS Software - Engineering Simulation Tools",
+    default: "PAACS Software | Engineering Tools",
     template: "%s | PAACS Software",
   },
-  description:
-    "PAACS Software delivers powerful, intuitive simulation tools for engineers and researchers. FEA, CFD, and multiphysics simulations in one seamless environment.",
+  description: siteDescription,
   keywords: [
     "PAACS Software",
-    "simulation software",
-    "FEA software",
-    "CFD software",
-    "engineering simulation",
-    "computational modeling",
-    "multiphysics simulation",
-    "finite element analysis",
-    "computational fluid dynamics",
+    "PAACS Mesh",
+    "mesh generation",
+    "surface meshing",
+    "tetrahedral meshing",
+    "finite element meshes",
   ],
   authors: [{ name: "PAACS Software Ltd" }],
   creator: "PAACS Software Ltd",
@@ -58,8 +57,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "PAACS Software",
-    title: "PAACS Software - Advanced Simulation Tools",
-    description: "Powerful simulation tools for engineering and research",
+    title: "PAACS Mesh | PAACS Software",
+    description: siteDescription,
     images: [
       {
         url: "/images/og-image.jpg",
@@ -73,8 +72,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@PAACS_Software",
     creator: "@PAACS_Software",
-    title: "PAACS Software",
-    description: "Advanced simulation tools for engineers",
+    title: "PAACS Mesh | PAACS Software",
+    description: siteDescription,
     images: ["/images/og-image.jpg"],
   },
   appleWebApp: {

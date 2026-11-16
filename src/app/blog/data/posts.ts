@@ -14,6 +14,7 @@ export type BlogPost = {
   description: string;
   content: string; // markdown or raw HTML
   image: string;
+  archived?: boolean;
 };
 
 const posts: BlogPost[] = [
@@ -91,6 +92,7 @@ Whether your focus is academic research, industrial engineering, or experimental
   },
   {
     slug: "test-blog",
+    archived: true,
     title: "This blog is a test / example",
     date: "2024-01-12",
     tags: ["Design", "Development", "Test"],

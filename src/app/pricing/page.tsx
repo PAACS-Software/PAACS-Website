@@ -1,25 +1,26 @@
-import Pricing from "@/components/Pricing";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Gap from "@/components/MobileGap/Gap";
-
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Pricing - Free Academic & Commercial Plans",
-  description:
-    "Flexible pricing for every need. Free perpetual license for students and researchers. Affordable commercial plans starting at $99/month.",
-  alternates: {
-    canonical: "https://paacs.pro/pricing",
-  },
+  title: "Pricing archive",
+  description: "The previous PAACS simulation pricing page has been archived.",
+  alternates: { canonical: "/pricing/" },
+  robots: { index: false, follow: true },
 };
 
-const PricingPage = () => {
+export default function PricingPage() {
   return (
-    <>
-      <Gap />
-      <Pricing />
-    </>
+    <main>
+      <Breadcrumb
+        pageName="Pricing archive"
+        description="The previous PAACS simulation plans have been archived. PAACS Mesh is in development, and we’ll post product and release information on its page."
+      />
+      <div className="container pb-20 pt-4">
+        <Link className="font-medium text-primary underline" href="/mesh/">
+          Explore PAACS Mesh
+        </Link>
+      </div>
+    </main>
   );
-};
-
-export default PricingPage;
+}

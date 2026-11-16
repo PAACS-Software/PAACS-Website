@@ -1,6 +1,4 @@
-import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
-// replace Image import
 import { FlowAnimation } from "./FlowAnimation";
 
 const checkIcon = (
@@ -28,8 +26,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Reseachers and Engineers"
-                paragraph="PAACS is designed to empower researchers and engineers with advanced simulation capabilities, enabling them to tackle complex physical problems with confidence and precision. We utlise a node interface for quick iterations, while also providing a scriptable Python backend for full customisation and automation."
+                title="The longer-term simulation roadmap"
+                paragraph="PAACS Mesh is our current focus. Later, we plan to develop a node-based simulation workflow and a scriptable Python backend for customisation and automation."
                 mb="44px"
               />
 

@@ -4,9 +4,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PAACS Software Licensing - Academic & Commercial Options",
+  title: "Software Licensing",
   description:
-    "Understand PAACS Software licensing options. Free for academic research, competitive commercial licensing. Compare features and choose your plan.",
+    "Licensing information for PAACS Software and where to find the terms for each product and release.",
   alternates: {
     canonical: "https://paacs.pro/license",
   },
@@ -16,6 +16,19 @@ export default function Licenses() {
   return (
     <div className="mx-auto mt-[10vh] max-w-4xl px-4 py-12 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
       <h1 className="mb-6 text-3xl font-bold">Licensing Information</h1>
+
+      <div className="mb-6 rounded-lg bg-blue-50 p-4 dark:bg-blue-900/20">
+        <h2 className="mb-2 text-lg font-semibold">Product and release terms</h2>
+        <p>
+          The information below describes the licensing model for the original
+          PAACS simulation software. Check the terms supplied with the product
+          and version you use. We’ll link any PAACS Mesh licence terms from its{" "}
+          <Link href="/mesh/" className="underline">
+            product page
+          </Link>{" "}
+          when release information is available.
+        </p>
+      </div>
 
       <p className="mt-2 text-xs italic text-gray-600 dark:text-gray-400">
         Effective Date: November 1, 2025
@@ -33,11 +46,11 @@ export default function Licenses() {
 
       <div className="bg-yellow-50 dark:bg-yellow-900/20 mt-4 rounded-lg p-4">
         <p className="text-sm font-semibold">
-          ⚠️ Beta Period Notice (Current Status):
+          ⚠️ Simulation Software Beta Period Notice:
         </p>
         <p className="mt-2 text-sm">
-          Currently, PAACS Software is in beta (versions 0.1.0 through 0.9.x).
-          During this period, ALL features, including commercial features, are
+          During the PAACS Software beta (versions 0.1.0 through 0.9.x), ALL
+          features, including commercial features, are
           available free of charge for evaluation and testing purposes. However,
           all users remain bound by our{" "}
           <Link href="/eula" className="underline">

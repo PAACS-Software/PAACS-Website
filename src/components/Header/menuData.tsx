@@ -8,6 +8,12 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
+    id: 5,
+    title: "PAACS Mesh",
+    path: "/mesh/",
+    newTab: false,
+  },
+  {
     id: 7,
     title: "More Info",
     newTab: false,
@@ -23,12 +29,6 @@ const menuData: Menu[] = [
         title: "Documentation",
         path: "https://docs.paacs.pro",
         newTab: true,
-      },
-      {
-        id: 33,
-        title: "Pricing",
-        path: "/pricing",
-        newTab: false,
       },
       {
         id: 71,
@@ -83,11 +83,5 @@ const menuData: Menu[] = [
     newTab: false,
   },
 
-  {
-    id: 5,
-    title: "PAACS Mesh",
-    path: "/mesh/",
-    newTab: false,
-  },
 ];
 export default menuData;

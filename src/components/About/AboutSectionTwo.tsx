@@ -28,20 +28,20 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Free for students
+                  Access for students
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  The software will be free for students to use, additionally it
-                  will be free for everyone until stated otherwise.
+                  We plan to provide academic access. Product-specific access
+                  details will be published with each release.
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Easy to use
+                  Accessible workflows
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  With the nodal interface and industry standard tools, this is
-                  simualtion software great for beginners and experts.
+                  We aim to make engineering tools approachable for beginners
+                  and flexible enough for experienced users.
                 </p>
               </div>
               <div className="mb-1">
@@ -49,8 +49,8 @@ const AboutSectionTwo = () => {
                   Extensive Documentation
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Documentation will recieve regular updates so that anyone can
-                  quickly learn the newest features.
+                  We plan to publish documentation and examples alongside
+                  releases so users can learn each workflow.
                 </p>
               </div>
             </div>

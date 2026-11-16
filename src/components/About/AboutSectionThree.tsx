@@ -44,10 +44,9 @@ export default function AboutSectionThree() {
                 What we do
               </h3>
               <p className="mb-8 text-base leading-relaxed text-body-color sm:text-lg">
-                We build practical simulation tools that fit real engineering
-                workflows—from CAD import to meshing, solving, and results. A
-                node-based workflow speeds iteration; scripting enables
-                automation when you need it.
+                We’re developing PAACS Mesh to help engineers prepare geometry
+                for numerical analysis. Solving and coupled multiphysics
+                modelling are planned for a later stage.
               </p>
 
               <h3 className="mb-3 text-xl font-semibold text-black dark:text-white">
@@ -55,11 +54,11 @@ export default function AboutSectionThree() {
               </h3>
               <ul className="mb-10 space-y-3">
                 <Bullet>
-                  Ship reliable structural FEA first; expand to thermal and EM.
+                  Prepare PAACS Mesh for its first public release.
                 </Bullet>
                 <Bullet>
-                  Harden the CAD → mesh → solve pipeline; improve robust STEP
-                  import.
+                  Broaden STEP import coverage and test meshing on more CAD
+                  models.
                 </Bullet>
                 <Bullet>
                   Strengthen interoperability with common open-source and
@@ -97,8 +96,7 @@ export default function AboutSectionThree() {
                 </div>
               </dl>
               <p className="mt-4 text-sm leading-relaxed text-body-color">
-                We ship focused, stable releases and are building academic and
-                industry ties to advance research.
+                We’re building academic and industry ties to advance research.
               </p>
             </div>
           </div>

@@ -13,6 +13,8 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import QuoteBox from "@/components/Blog/QuoteBox";
+import Breadcrumb from "@/components/Common/Breadcrumb";
+import Link from "next/link";
 
 export const dynamicParams = false;
 
@@ -41,6 +43,15 @@ export async function generateMetadata({
 
   if (!post) {
     return { title: "Not Found", description: "Blog post not found" };
+  }
+
+  if (post.archived) {
+    return {
+      title: "Archived blog post",
+      description: "This PAACS blog post has been archived.",
+      alternates: { canonical: `/blog/${slug}/` },
+      robots: { index: false, follow: true },
+    };
   }
 
   const canonicalUrl = `https://paacs.pro/blog/${slug}`;
@@ -84,6 +95,22 @@ export default async function BlogPost({
   const { slug } = await params;
   const post = posts.find((p) => p.slug === slug);
   if (!post) notFound();
+
+  if (post.archived) {
+    return (
+      <main>
+        <Breadcrumb
+          pageName="Archived blog post"
+          description="This sample post has been archived. Explore company news and technical articles on the PAACS blog."
+        />
+        <div className="container pb-20 pt-4">
+          <Link className="font-medium text-primary underline" href="/blog/">
+            Read the PAACS blog
+          </Link>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <section className="pb-[120px] pt-[150px]">

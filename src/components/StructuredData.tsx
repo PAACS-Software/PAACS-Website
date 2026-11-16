@@ -30,7 +30,7 @@ export default function StructuredData() {
     url: "https://paacs.pro/images/og-image.jpg", // your OG image
     width: 1200,
     height: 630,
-    caption: "PAACS multiphysics simulation",
+    caption: "PAACS Software",
     contentUrl: "https://paacs.pro/images/og-image.jpg",
     encodingFormat: "image/jpeg",
   };
@@ -46,7 +46,7 @@ export default function StructuredData() {
     logo: { "@id": ids.logo },
     image: { "@id": ids.og },
     description:
-      "PAACS Software Ltd specializes in computational software for multiphysics simulation.",
+      "PAACS Software Ltd develops engineering tools and is focused on PAACS Mesh.",
     email: "support@paacs.pro",
     foundingDate: "2024",
     sameAs: [
@@ -70,64 +70,15 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": ids.sw,
-    name: "PAACS Software",
+    name: "PAACS Mesh",
     applicationCategory: "EngineeringApplication",
-    applicationSubCategory: "Simulation Software",
-    operatingSystem: "Windows, macOS, Linux",
+    applicationSubCategory: "Mesh generation",
     inLanguage: "en",
-    isAccessibleForFree: true, // academic free tier
-    license: "https://paacs.pro/license", // your license page
     description:
-      "Professional FEA, CFD, and multiphysics simulation software for engineers and researchers.",
-    url: "https://paacs.pro",
-    softwareHelp: "https://docs.paacs.pro",
-    screenshot: { "@id": ids.og },
-    image: { "@id": ids.og },
+      "Pre-release software for surface and volume meshing, mesh quality checks, and export.",
+    url: "https://paacs.pro/mesh/",
     creator: { "@id": ids.org },
     publisher: { "@id": ids.org },
-    maintainer: { "@id": ids.org },
-    softwareVersion: "0.1.0", // <-- put your real version here
-    softwareRequirements: "8 GB RAM minimum; dedicated GPU recommended.",
-    featureList: [
-      "Finite Element Analysis (FEA)",
-      "Computational Fluid Dynamics (CFD)",
-      "Multiphysics Simulation",
-      "Thermal Analysis",
-      "Electromagnetic Simulation",
-      "Structural Analysis",
-    ],
-    // datePublished: "2025-08-13", // use your real first-release date
-    dateModified: "2025-08-13",
-    // Model free academic + paid commercial clearly:
-    offers: [
-      {
-        "@type": "Offer",
-        name: "Academic",
-        price: "0.00",
-        priceCurrency: "USD",
-        url: "https://paacs.pro/pricing#academic",
-        category: "Educational",
-        availability: "https://schema.org/InStock",
-      },
-      {
-        "@type": "Offer",
-        name: "Commercial",
-        url: "https://paacs.pro/pricing#commercial",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "USD",
-          // price: "99.00", // if/when you want to surface a price
-        },
-        availability: "https://schema.org/InStock",
-      },
-    ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      ratingCount: "1",
-      bestRating: "5",
-      worstRating: "5",
-    },
   };
 
   // --- WebSite ---
@@ -147,7 +98,7 @@ export default function StructuredData() {
     "@type": "WebPage",
     "@id": ids.home,
     url: "https://paacs.pro",
-    name: "PAACS — Multiphysics Simulation Software",
+    name: "PAACS Mesh | Geometry-to-mesh tools",
     isPartOf: { "@id": ids.site },
     about: { "@id": ids.sw },
     primaryImageOfPage: { "@id": ids.og },
@@ -170,38 +121,6 @@ export default function StructuredData() {
     ],
   };
 
-  // --- FAQ ---
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Is PAACS Software free?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "PAACS is free for academic and research use. Commercial licenses are available.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What operating systems does PAACS support?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "PAACS runs on Windows, macOS, and Linux.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What types of simulations can PAACS perform?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "PAACS supports FEA, CFD, thermal, electromagnetic, and multiphysics simulations.",
-        },
-      },
-    ],
-  };
-
   const graphs = [
     logoImage,
     ogImage,
@@ -210,7 +129,6 @@ export default function StructuredData() {
     websiteSchema,
     webPageSchema,
     breadcrumbSchema,
-    faqSchema,
   ];
 
   return (

@@ -1,6 +1,5 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import AboutHero from "@/components/About/AboutHero";
 import AboutSectionThree from "@/components/About/AboutSectionThree";
 import AboutSectionFour from "@/components/About/AboutSectionFour";
@@ -10,7 +9,7 @@ import Gap from "@/components/MobileGap/Gap";
 export const metadata: Metadata = {
   title: "About Us - Computational Engineering",
   description:
-    "Learn about PAACS Software Ltd, our mission to democratize engineering simulation, and our team of computational physics experts.",
+    "Learn about PAACS Software Ltd, our current focus on PAACS Mesh, and our longer-term plans for multiphysics modelling.",
   alternates: {
     canonical: "https://paacs.pro/about",
   },

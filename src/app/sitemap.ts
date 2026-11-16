@@ -8,7 +8,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/about",
-    "/pricing",
     "/terms",
     "/blog",
     "/cookie-policy",
@@ -22,11 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
     priority: p === "" ? 1 : 0.7,
   }));
-  const blogRoutes = posts.map((p) => ({
-    url: `${base}/blog/${p.slug}/`,
-    lastModified: p.date ?? new Date().toISOString().split("T")[0],
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+  const blogRoutes = posts
+    .filter((p) => !p.archived)
+    .map((p) => ({
+      url: `${base}/blog/${p.slug}/`,
+      lastModified: p.date ?? new Date().toISOString().split("T")[0],
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
   return [...staticRoutes, ...blogRoutes];
 }

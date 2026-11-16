@@ -43,9 +43,8 @@ const AboutSectionFour = () => {
             Built on Giants: Our Technology Stack
           </h2>
           <p className="mx-auto max-w-[700px] text-base text-body-color">
-            PAACS leverages world-class open-source technologies and a network
-            of academic research to deliver professional-grade simulation
-            capabilities.
+            Open-source engineering tools and academic research inform our
+            current meshing work and our longer-term simulation plans.
           </p>
         </div>
 
@@ -64,9 +63,8 @@ const AboutSectionFour = () => {
 
             <TechCard
               title="Kratos Multiphysics"
-              description="Our solver layer builds on Kratos Multiphysics (developed at CIMNE/UPC), a
-              modular finite-element framework widely used in research and industry. Its
-              architecture allows us to compose workflows for FEA, CFD, and coupled multiphysics."
+              description="We are exploring Kratos Multiphysics, a modular finite-element framework
+              developed at CIMNE/UPC, for future FEA, CFD, and coupled simulation workflows."
             />
 
             <TechCard

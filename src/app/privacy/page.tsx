@@ -1,6 +1,7 @@
 // src/app/privacy/page.tsx
 
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - PAACS Software Data Protection & Privacy",
@@ -15,6 +16,19 @@ export default function PrivacyPolicy() {
   return (
     <div className="mx-auto mt-[10vh] max-w-4xl px-4 py-12 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
       <h1 className="mb-6 text-3xl font-bold">Privacy Policy</h1>
+
+      <div className="mb-6 rounded-lg bg-blue-50 p-4 dark:bg-blue-900/20">
+        <h2 className="mb-2 text-lg font-semibold">Product privacy notices</h2>
+        <p>
+          This page contains PAACS Software Ltd’s general privacy policy.
+          When a product has additional privacy information, we’ll link its
+          notice from the relevant product page, starting with{" "}
+          <Link href="/mesh/" className="underline">
+            PAACS Mesh
+          </Link>
+          .
+        </p>
+      </div>
 
       <p className="mt-2 text-xs italic text-gray-600 dark:text-gray-400">
         Effective Date: November 1, 2025
