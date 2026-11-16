@@ -30,34 +30,31 @@ const Wave = () => {
   }, []);
 
   return (
-    <div
-      aria-hidden="true"
-      className="wave-animation relative -mt-[12vh] h-[15vh] w-full overflow-hidden"
-    >
+    <div aria-hidden="true" className="wave-animation">
       {/* Wave Layer 1 */}
       <div
-        className="air air1 absolute bottom-0 left-0 h-[12vh] w-full bg-no-repeat"
+        className="air air1"
         style={{
           backgroundImage: `url(${isDark ? waveImageDark : waveImage})`,
         }}
       />
       {/* Wave Layer 2 */}
       <div
-        className="air air2 absolute bottom-0 left-0 h-[12vh] w-full bg-no-repeat"
+        className="air air2"
         style={{
           backgroundImage: `url(${isDark ? waveImageDark : waveImage})`,
         }}
       />
       {/* Wave Layer 3 */}
       <div
-        className="air air3 absolute bottom-0 left-0 h-[12vh] w-full bg-no-repeat"
+        className="air air3"
         style={{
           backgroundImage: `url(${isDark ? waveImageDark : waveImage})`,
         }}
       />
       {/* Wave Layer 4 */}
       <div
-        className="air air4 absolute bottom-0 left-0 h-[12vh] w-full bg-no-repeat"
+        className="air air4"
         style={{
           backgroundImage: `url(${isDark ? waveImageDark : waveImage})`,
         }}

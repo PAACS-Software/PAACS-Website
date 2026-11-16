@@ -30,12 +30,18 @@
   }
 }
 
-/* Wave Animation Section */
+/* Keep the full wave artwork visible even on short screens. */
+.home-page {
+  --wave-image-height: 100px;
+  --wave-layer-height: max(12vh, var(--wave-image-height));
+}
+
 .wave-animation {
   position: relative;
   width: 100%;
-  height: 15vh;
-  background: transparent;
+  height: calc(var(--wave-layer-height) + max(3vh, 8px));
+  margin-top: calc(-1 * var(--wave-layer-height));
+  overflow: hidden;
 }
 
 .wave-animation .air {
@@ -43,9 +49,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 12vh;
+  height: var(--wave-layer-height);
 
-  background-size: 1000px 100px;
+  background-size: 1000px var(--wave-image-height);
   background-repeat: repeat-x;
   background-position-y: bottom;
 }

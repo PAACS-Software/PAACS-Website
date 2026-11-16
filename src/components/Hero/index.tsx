@@ -274,7 +274,7 @@ const Hero = () => {
             </defs>
           </svg>
         </div>
-        <div className="h-[10vh] w-full"></div>
+        <div className="h-[max(10vh,calc(var(--wave-layer-height)-3rem))]" />
       </section>
     </>
   );

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <ScrollUp />
       <Hero />
       <Wave />
