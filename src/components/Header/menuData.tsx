@@ -69,7 +69,7 @@ const menuData: Menu[] = [
       },
       {
         id: 84,
-        title: "Licensing",
+        title: "Software licensing",
         path: "/license",
         newTab: false,
       },

@@ -19,14 +19,14 @@ const inter = localFont({
 });
 
 const siteDescription =
-  "PAACS Software is developing PAACS Mesh for surface and volume meshing, mesh checks, and export. Multiphysics modelling is planned for a later stage.";
+  "PAACS Software builds engineering tools. Our first product in development is PAACS Mesh, with multiphysics modelling planned for a later stage.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://paacs.pro"),
   applicationName: "PAACS Software",
   category: "technology",
   title: {
-    default: "PAACS Software | Engineering Tools",
+    default: "PAACS Software | Understanding the Complex",
     template: "%s | PAACS Software",
   },
   description: siteDescription,
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "PAACS Software",
-    title: "PAACS Mesh | PAACS Software",
+    title: "PAACS Software | Understanding the Complex",
     description: siteDescription,
     images: [
       {
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@PAACS_Software",
     creator: "@PAACS_Software",
-    title: "PAACS Mesh | PAACS Software",
+    title: "PAACS Software | Understanding the Complex",
     description: siteDescription,
     images: ["/images/og-image.jpg"],
   },

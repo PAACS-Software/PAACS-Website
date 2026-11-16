@@ -5,9 +5,8 @@ import { useEffect, useState } from "react";
 const Wave = () => {
   const [isDark, setIsDark] = useState(false);
 
-  // Use relative paths for GitHub Pages compatibility
-  const waveImage = "./images/wave/wave.png";
-  const waveImageDark = "./images/wave/wave-dark.png";
+  const waveImage = "/images/wave/wave.png";
+  const waveImageDark = "/images/wave/wave-dark.png";
 
   // Check if dark mode is enabled
   useEffect(() => {
@@ -31,7 +30,10 @@ const Wave = () => {
   }, []);
 
   return (
-    <div className="wave-animation relative -mt-[12vh] h-[15vh] w-full overflow-hidden">
+    <div
+      aria-hidden="true"
+      className="wave-animation relative -mt-[12vh] h-[15vh] w-full overflow-hidden"
+    >
       {/* Wave Layer 1 */}
       <div
         className="air air1 absolute bottom-0 left-0 h-[12vh] w-full bg-no-repeat"

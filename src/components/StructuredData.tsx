@@ -98,7 +98,7 @@ export default function StructuredData() {
     "@type": "WebPage",
     "@id": ids.home,
     url: "https://paacs.pro",
-    name: "PAACS Mesh | Geometry-to-mesh tools",
+    name: "PAACS Software | Understanding the Complex",
     isPartOf: { "@id": ids.site },
     about: { "@id": ids.sw },
     primaryImageOfPage: { "@id": ids.og },

@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mesh/",
     "/eula",
     "/license",
+    "/license/mesh/",
     "/privacy",
   ].map((p) => ({
     url: `${base}${p || "/"}`,

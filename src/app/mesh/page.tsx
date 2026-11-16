@@ -1,29 +1,33 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import MeshHero from "@/components/MeshHero";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "PAACS Mesh product overview",
+  title: "PAACS Mesh",
   description:
     "Explore the PAACS Mesh pre-release workflows for surface and volume meshing, quality checks, and export.",
   alternates: { canonical: "/mesh/" },
+  openGraph: {
+    title: "PAACS Mesh | PAACS Software",
+    description: "Prepare geometry for engineering simulation with PAACS Mesh.",
+    images: [
+      { url: "/images/mesh/surface-mesh.webp", width: 1280, height: 880 },
+    ],
+  },
 };
 
 export default function MeshPage() {
   return (
     <main>
-      <Breadcrumb
-        pageName="PAACS Mesh"
-        description="PAACS Mesh is a geometry-to-mesh tool in development for engineers and researchers preparing models for finite-element analysis."
-      />
+      <MeshHero />
 
-      <div className="container space-y-12 pb-20 pt-6">
+      <div className="container space-y-12 py-16 md:py-20">
         <section aria-labelledby="mesh-capabilities">
           <h2
             id="mesh-capabilities"
-            className="mb-5 text-2xl font-bold text-black dark:text-white sm:text-3xl"
+            className="mb-5 scroll-mt-24 text-2xl font-bold text-black dark:text-white sm:text-3xl"
           >
-            What we’re developing
+            From geometry to a checked mesh
           </h2>
           <dl className="max-w-4xl divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800">
             <div className="grid gap-2 py-5 sm:grid-cols-[11rem_1fr]">
@@ -77,6 +81,12 @@ export default function MeshPage() {
             href="/about/"
           >
             About PAACS Software
+          </Link>
+          <Link
+            className="mt-5 block font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300"
+            href="/license/mesh/"
+          >
+            PAACS Mesh licensing
           </Link>
         </section>
       </div>

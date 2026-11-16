@@ -139,9 +139,18 @@ export default function TermsAndConditions() {
 
       <h2 className="mt-6 text-xl font-semibold">2. ACCOUNT REGISTRATION</h2>
 
+      <p className="mt-2">
+        Account registration and sign-in are currently paused. See the{" "}
+        <Link href="/account/" className="underline">
+          account status page
+        </Link>{" "}
+        for updates and support.
+      </p>
+
       <h3 className="mt-4 text-lg font-medium">2.1 Account Creation</h3>
       <p>
-        To access certain Services, you must create an account by providing:
+        Where a service offers registration and requires an account, you must
+        provide:
       </p>
       <ul className="ml-5 mt-2 list-disc">
         <li>Accurate and complete information</li>
@@ -499,7 +508,7 @@ export default function TermsAndConditions() {
       <h3 className="mt-4 text-lg font-medium">12.1 Termination by You</h3>
       <p>You may terminate your account at any time by:</p>
       <ul className="ml-5 mt-2 list-disc">
-        <li>Following the account closure process in settings</li>
+        <li>Using account closure settings where available</li>
         <li>Contacting support@paacs.pro</li>
         <li>Ceasing use of the Services</li>
       </ul>

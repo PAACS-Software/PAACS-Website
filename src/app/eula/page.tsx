@@ -4,9 +4,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "End User License Agreement (EULA) - PAACS Software",
+  title: "PAACS Simulation Software Licence",
   description:
-    "Read the PAACS End User License Agreement (EULA) covering usage rights, restrictions, intellectual property, and legal responsibilities for all users.",
+    "End User License Agreement for the original PAACS simulation software.",
   alternates: {
     canonical: "https://paacs.pro/eula",
   },
@@ -16,17 +16,19 @@ export default function EULA() {
   return (
     <div className="mx-auto mt-[10vh] max-w-4xl px-4 py-12 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
       <h1 className="mb-6 text-3xl font-bold">
-        End User License Agreement (EULA)
+        PAACS Simulation Software Licence
       </h1>
 
+      <p className="mb-4">
+        This End User License Agreement covers the original PAACS simulation
+        software. See the{" "}
+        <Link href="/license/" className="underline">
+          software licensing directory
+        </Link>{" "}
+        for other products.
+      </p>
       <p className="mt-2 text-xs italic text-gray-600 dark:text-gray-400">
-        Effective Date: November 1, 2025
-      </p>
-      <p className="mt-1 text-xs italic text-gray-600 dark:text-gray-400">
-        Last Updated: November 1, 2025
-      </p>
-      <p className="mt-1 text-xs italic text-gray-600 dark:text-gray-400">
-        Version: 1.0.0
+        Originally published November 1, 2025. Revised November 15, 2026.
       </p>
       <p className="mt-1 text-xs italic text-gray-600 dark:text-gray-400">
         This EULA is originally drafted in English. In case of conflicting
@@ -40,20 +42,6 @@ export default function EULA() {
           downloading, accessing, or otherwise using the Software, you
           acknowledge that you have read, understood, and agree to be bound by
           the terms of this EULA. If you do not agree, do not use the Software.
-        </p>
-      </div>
-
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 mt-4 rounded-lg p-4">
-        <p className="text-sm font-semibold">
-          Beta Period Notice (Versions 0.1.0 - 0.9.x):
-        </p>
-        <p className="mt-2 text-sm">
-          During the beta period (all versions prior to 1.0.0), commercial
-          features are available free of charge for evaluation purposes.
-          However, this EULA remains in full effect, and upon release of version
-          1.0.0, ALL versions of the Software (including previously installed
-          beta versions) will require appropriate commercial licensing for any
-          commercial use.
         </p>
       </div>
 
@@ -116,7 +104,7 @@ export default function EULA() {
         <li>
           <strong>Commercial License:</strong> Paid license required for any
           business use, commercial research, consulting, or revenue-generating
-          activities. Includes premium features and priority support.
+          activities. Available features and support depend on the licence supplied.
         </li>
         <li>
           <strong>Trial/Evaluation License:</strong> Time-limited license for
@@ -129,29 +117,11 @@ export default function EULA() {
         </li>
       </ul>
 
-      <h3 className="mt-4 text-lg font-medium">1.3 Beta Period Terms</h3>
+      <h3 className="mt-4 text-lg font-medium">1.3 Evaluation Releases</h3>
       <p>
-        For Software versions 0.1.0 through 0.9.x (&ldquo;Beta Versions&rdquo;):
+        If an evaluation release is provided, use it for the evaluation
+        purposes and period specified in the terms supplied with that release.
       </p>
-      <ul className="ml-5 mt-2 list-disc">
-        <li>
-          Commercial features are temporarily available without a commercial
-          license
-        </li>
-        <li>This is for evaluation and testing purposes only</li>
-        <li>
-          The Company reserves the right to disable commercial features at any
-          time
-        </li>
-        <li>
-          Upon release of version 1.0.0, all Beta Versions will require
-          appropriate licensing
-        </li>
-        <li>
-          Retroactive commercial licenses will be required for continued
-          commercial use of any version
-        </li>
-      </ul>
 
       <h2 className="mt-6 text-xl font-semibold">2. LICENSE RESTRICTIONS</h2>
       <p>You may NOT:</p>
@@ -223,17 +193,15 @@ export default function EULA() {
         4. ACTIVATION AND VALIDATION
       </h2>
 
-      <h3 className="mt-4 text-lg font-medium">4.1 Activation Required</h3>
+      <h3 className="mt-4 text-lg font-medium">4.1 Activation</h3>
       <p>
-        The Software requires activation through a valid user account and, for
-        commercial licenses, a valid License Key. Activation associates the
-        Software with specific hardware and/or user account.
+        If your licence requires activation, follow the instructions supplied
+        with your copy of the Software and use the License Key provided to you.
       </p>
 
       <h3 className="mt-4 text-lg font-medium">4.2 Validation Checks</h3>
       <p>
-        The Software performs periodic validation to verify license compliance.
-        These checks may:
+        Where the Software uses periodic license validation, these checks may:
       </p>
       <ul className="ml-5 mt-2 list-disc">
         <li>Verify the authenticity and validity of your license</li>
@@ -244,9 +212,9 @@ export default function EULA() {
 
       <h3 className="mt-4 text-lg font-medium">4.3 Internet Connection</h3>
       <p>
-        Periodic internet connection is required for license validation.
-        Extended offline use may result in reduced functionality or
-        deactivation.
+        If your release uses online license validation, it may require
+        periodic internet access. See the instructions supplied with the
+        release for offline use.
       </p>
 
       <h2 className="mt-6 text-xl font-semibold">5. UPDATES AND SUPPORT</h2>
