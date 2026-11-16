@@ -270,7 +270,7 @@ export default function EULA() {
       <h3 className="mt-4 text-lg font-medium">6.2 Privacy Policy</h3>
       <p>
         Data collection and processing are governed by our{" "}
-        <Link href="/privacy" className="underline">
+        <Link href="/privacy/company/" className="underline">
           Privacy Policy
         </Link>
         , which is incorporated by reference into this Agreement.

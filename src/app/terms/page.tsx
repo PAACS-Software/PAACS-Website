@@ -92,7 +92,7 @@ export default function TermsAndConditions() {
       <p>
         By accessing or using our Services, you agree to be bound by these
         Terms, our{" "}
-        <Link href="/privacy" className="underline">
+        <Link href="/privacy/company/" className="underline">
           Privacy Policy
         </Link>
         ,{" "}
@@ -369,7 +369,7 @@ export default function TermsAndConditions() {
       <h3 className="mt-4 text-lg font-medium">8.1 Privacy Policy</h3>
       <p>
         Your use of our Services is subject to our{" "}
-        <Link href="/privacy" className="underline">
+        <Link href="/privacy/company/" className="underline">
           Privacy Policy
         </Link>
         , which explains how we collect, use, and protect your personal data.

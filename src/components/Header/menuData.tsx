@@ -63,8 +63,8 @@ const menuData: Menu[] = [
       },
       {
         id: 83,
-        title: "Privacy Policy",
-        path: "/privacy",
+        title: "Privacy",
+        path: "/privacy/",
         newTab: false,
       },
       {

@@ -20,7 +20,7 @@ export default function CookiePolicy() {
         Effective Date: November 1, 2025
       </p>
       <p className="mt-1 text-xs italic text-gray-600 dark:text-gray-400">
-        Last Updated: November 1, 2025
+        Last Updated: November 15, 2026
       </p>
       <p className="mt-1 text-xs italic text-gray-600 dark:text-gray-400">
         Version: 1.0.0
@@ -45,7 +45,7 @@ export default function CookiePolicy() {
       </p>
       <p className="mt-2">
         This Policy should be read in conjunction with our{" "}
-        <a href="/privacy" className="underline">
+        <a href="/privacy/company/" className="underline">
           Privacy Policy
         </a>
         , which provides additional information about how we collect, use, and
@@ -79,9 +79,8 @@ export default function CookiePolicy() {
           <strong>Purpose:</strong> Essential for website operation and security
         </li>
         <li>
-          <strong>Function:</strong> Enable core functionality including user
-          authentication, session management, security features, and load
-          balancing
+          <strong>Function:</strong> Enable security and load balancing, and
+          support authentication and sessions where sign-in is available
         </li>
         <li>
           <strong>Examples:</strong> Session ID cookies, authentication tokens,
@@ -192,9 +191,9 @@ export default function CookiePolicy() {
           </a>
         </li>
         <li>
-          <strong>OAuth Providers:</strong> When you choose to authenticate
-          using GitHub or Google, these providers may set cookies for
-          authentication purposes
+          <strong>OAuth Providers:</strong> Account registration and sign-in are
+          paused. GitHub or Google may have set authentication cookies during
+          earlier sign-in sessions.
         </li>
         <li>
           <strong>Cloudflare:</strong> For content delivery and DDoS protection.{" "}
@@ -249,9 +248,8 @@ export default function CookiePolicy() {
       </p>
       <ul className="ml-5 mt-2 list-disc">
         <li>
-          <strong>Strictly Necessary Cookies:</strong> Disabling these will
-          prevent you from accessing secure areas, maintaining login sessions,
-          or using core functionality
+          <strong>Strictly Necessary Cookies:</strong> Disabling these can
+          affect core functionality and, where available, sign-in sessions
         </li>
         <li>
           <strong>Performance Cookies:</strong> We will be unable to gather

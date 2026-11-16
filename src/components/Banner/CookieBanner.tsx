@@ -87,7 +87,7 @@ export default function CookieBanner() {
         <p className="text-sm text-white">
           We use cookies for analytics to improve your experience. See our{" "}
           <a
-            href="/privacy"
+            href="/privacy/company/"
             className="text-primary underline transition-colors hover:text-primary/80"
             target="_blank"
             rel="noopener noreferrer"

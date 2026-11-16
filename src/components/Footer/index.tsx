@@ -158,10 +158,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/privacy"
+                      href="/privacy/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Privacy Policy
+                      Privacy
                     </Link>
                   </li>
                   <li>
@@ -209,7 +209,7 @@ const Footer = () => {
               </a>{" "}
               and{" "}
               <a
-                href="/privacy"
+                href="/privacy/company/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"

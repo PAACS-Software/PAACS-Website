@@ -88,6 +88,12 @@ export default function MeshPage() {
           >
             PAACS Mesh licensing
           </Link>
+          <Link
+            className="mt-5 block font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300"
+            href="/privacy/mesh/"
+          >
+            PAACS Mesh privacy
+          </Link>
         </section>
       </div>
     </main>

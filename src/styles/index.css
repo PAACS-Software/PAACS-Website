@@ -47,6 +47,7 @@
 
   background-size: 1000px 100px;
   background-repeat: repeat-x;
+  background-position-y: bottom;
 }
 
 .wave-animation .air1 {
