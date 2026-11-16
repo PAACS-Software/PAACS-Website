@@ -60,7 +60,6 @@ export default function StructuredData() {
         "@type": "ContactPoint",
         contactType: "Customer Support",
         email: "support@paacs.pro",
-        url: "https://user.paacs.pro/contact",
         availableLanguage: ["en"],
       },
     ],
@@ -81,7 +80,6 @@ export default function StructuredData() {
     description:
       "Professional FEA, CFD, and multiphysics simulation software for engineers and researchers.",
     url: "https://paacs.pro",
-    downloadUrl: "https://paacs.pro/download",
     softwareHelp: "https://docs.paacs.pro",
     screenshot: { "@id": ids.og },
     image: { "@id": ids.og },
@@ -100,16 +98,6 @@ export default function StructuredData() {
     ],
     // datePublished: "2025-08-13", // use your real first-release date
     dateModified: "2025-08-13",
-    potentialAction: [
-      {
-        "@type": "DownloadAction",
-        target: "https://paacs.pro/download",
-      },
-      {
-        "@type": "InstallAction",
-        target: "https://paacs.pro/download",
-      },
-    ],
     // Model free academic + paid commercial clearly:
     offers: [
       {

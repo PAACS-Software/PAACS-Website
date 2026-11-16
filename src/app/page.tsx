@@ -1,17 +1,16 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-import Video from "@/components/Video";
 import Wave from "@/components/Wave/Wave";
 import { Metadata } from "next";
-import AboutCompany from "@/components/AboutCompany";
-import WhyPAACS from "@/components/WhyPAACS";
 
 export const metadata: Metadata = {
   description:
-    "Professional simulation software for structural, fluid, thermal, and electromagnetic analysis. Powerful yet intuitive tools trusted by engineers worldwide. Try free.",
+    "PAACS Software is developing PAACS Mesh as the first step toward a broader multiphysics modelling workflow.",
   keywords: [
     "PAACS Software",
+    "PAACS Mesh",
+    "mesh generation",
     "engineering simulation software",
     "FEA software",
     "CFD software",

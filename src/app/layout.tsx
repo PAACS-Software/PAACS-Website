@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "../styles/index.css";
 import { Metadata } from "next";
 import StructuredData from "@/components/StructuredData";
@@ -12,7 +12,11 @@ import { Providers } from "./providers";
 export const dynamic = "error";
 export const revalidate = false;
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = localFont({
+  src: "./fonts/inter-latin.woff2",
+  weight: "100 900",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://paacs.pro"),

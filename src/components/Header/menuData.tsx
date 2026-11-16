@@ -52,7 +52,7 @@ const menuData: Menu[] = [
       {
         id: 81,
         title: "Contact",
-        path: "https://user.paacs.pro/contact",
+        path: "mailto:support@paacs.pro",
         newTab: false,
       },
       {
@@ -73,85 +73,20 @@ const menuData: Menu[] = [
         path: "/license",
         newTab: false,
       },
-      {
-        id: 85,
-        title: "Forgot Password",
-        path: "https://user.paacs.pro/forgot-password",
-        newTab: false,
-      },
     ],
   },
 
   {
     id: 4,
     title: "Account",
+    path: "/account/",
     newTab: false,
-    submenu: [
-      /*
-      {
-        id: 41,
-        title: "About",
-        path: "/about",
-        newTab: false,
-      },
-      {
-        id: 42,
-        title: "Contact",
-        path: "/contact",
-        newTab: false,
-      },
-      */
-      /*
-      {
-        id: 43,
-        title: "Blog Grid Page",
-        path: "/blog",
-        newTab: false,
-      },
-      {
-        id: 44,
-        title: "Blog Sidebar Page",
-        path: "/blog-sidebar",
-        newTab: false,
-      },
-      {
-        id: 45,
-        title: "Blog Details Page",
-        path: "/blog-details",
-        newTab: false,
-      },
-      */
-      {
-        id: 46,
-        title: "Sign In",
-        path: "https://user.paacs.pro/signin",
-        newTab: false,
-      },
-      {
-        id: 47,
-        title: "Sign Up",
-        path: "https://user.paacs.pro/signup",
-        newTab: false,
-      },
-      {
-        id: 48,
-        title: "Profile",
-        path: "https://user.paacs.pro/profile",
-        newTab: false,
-      },
-      {
-        id: 49,
-        title: "Forgot Password",
-        path: "https://user.paacs.pro/forgot-password",
-        newTab: false,
-      },
-    ],
   },
 
   {
     id: 5,
-    title: "Download",
-    path: "/download",
+    title: "PAACS Mesh",
+    path: "/mesh/",
     newTab: false,
   },
 ];

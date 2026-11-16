@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Wave from "@/components/Wave/Wave";
 
 const Hero = () => {
   return (
@@ -16,20 +15,21 @@ const Hero = () => {
                   PAACS Software
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Understanding the Complex
+                  PAACS Mesh is our first focus as we develop tools for
+                  multiphysics modelling.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href="/download"
+                    href="/mesh/"
                     className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    🔥 Download Now
+                    Find out more about PAACS Mesh
                   </Link>
                   <Link
                     href="/about"
                     className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
-                    Find out more
+                    About PAACS
                   </Link>
                 </div>
               </div>

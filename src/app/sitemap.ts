@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms",
     "/blog",
     "/cookie-policy",
-    "/download",
+    "/mesh/",
     "/eula",
     "/license",
     "/privacy",
