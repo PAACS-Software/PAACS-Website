@@ -61,6 +61,25 @@ export default function MeshPage() {
           </dl>
         </section>
 
+        <section aria-labelledby="mesh-examples">
+          <h2
+            id="mesh-examples"
+            className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl"
+          >
+            See the mesh take shape
+          </h2>
+          <p className="max-w-2xl leading-relaxed text-slate-700 dark:text-slate-300">
+            Watch two short recordings of cube and curved-cylinder meshes, from
+            edge and surface construction to tetrahedral volume meshing.
+          </p>
+          <Link
+            className="mt-5 inline-block font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300"
+            href="/mesh/examples/"
+          >
+            View meshing examples
+          </Link>
+        </section>
+
         <section
           aria-labelledby="mesh-release"
           className="max-w-4xl rounded-lg bg-slate-100 p-6 dark:bg-slate-900 sm:p-8"
